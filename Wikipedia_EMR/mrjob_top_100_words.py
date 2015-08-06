@@ -2,10 +2,8 @@
 
 from mrjob.job import MRJob
 from mrjob.step import MRStep
-import re
-import heapq
 import xml.etree.ElementTree as ET
-import mwparserfromhell
+import re, heapq, mwparserfromhell
 
 WORD_RE = re.compile(r"\w+")
 START_RE = re.compile('.*<page>.*')
@@ -29,14 +27,13 @@ class MRTOP100(MRJob):
             yield (None,page)
     
     def mapper_get_xml_words(self, _, page):
-        tree = ET.fromstring(page.encode('utf-8'))
-        tagtext = [(x.tag, x.text) for x in tree.getiterator()]
-        for tag, text in tagtext:
-            if tag == 'text':
-                if text:
-                    for parsedtext in mwparserfromhell.parse(text).filter_text():    
-                        for word in WORD_RE.findall(parsedtext.value):
-                            yield (word.lower(), 1)
+        root = ET.fromstring(page.encode)
+        tag_and_text = [(x.tag, x.text) for x in root.getiterator()]
+        for tag, text in tag_and_text:
+            if (tag == 'text' and text):
+                for parsedtext in mwparserfromhell.parse(text).filter_text():    
+                    for word in WORD_RE.findall(parsedtext.value):
+                        yield (word.lower(), 1)
 
     def combiner_count_words(self, word, counts):
         # sum the words we've seen so far                                                            
