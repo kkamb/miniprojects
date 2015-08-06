@@ -31,17 +31,15 @@ Finally, I looked at double links (pages A and C that are connected through many
   such "non-content" pages (and there might be more than just this) and links
   to them should be first filtered out in this analysis.
 
-  3. Some pages have more links than others.  If we just counted the number of
-  double links between pages, we will end up seeing a list of articles with
+  3. Some pages have more links than others.  If I'd just counted the number of
+  double links between pages, I'd have ended up gathering links that appear on articles with
   many links, rather than concepts that are tightly connected. 
 
-  One strategy is to weight each link as <i>1/n</i> where n is the
+  One strategy is to weight each link as <i>1/n</i> where <i>n</i> is the
   number links on the page.  This way, an article has to spread its
-  "influence" over all n of its links.  However, this can throw off the
-  results if n is small. Instead, I weighted each link as <i>1/(n+10)</i> 
-  where 10 sets the "scale" in terms of number of links above which a page 
-  becomes "significant".  The number 10 was somewhat arbitrarily chosen but 
-  seems to give reasonably relevant results. This means that my "count" for 
-  a pair (A,C) will be the products of the two link weights between them, 
+  "influence" over all <i>n</i> of its links.  However, this can throw off the
+  results for small <i>n</i>. So I created a somewhat arbitrary threshold at 10, and weighted each link as <i>1/(n+10)</i>, where <i>10</i> denotes the number of links above which a page 
+  becomes significant. This means that my "count" for 
+  a pair (A,C) is the product of the two link weights between them, 
   summed up over all their shared connections.
 
