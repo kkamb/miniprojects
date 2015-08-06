@@ -25,11 +25,10 @@ Finally, I looked at double links (pages A and C that are connected through many
   matrix is denoted <i>M</i> (where <i>M_(ij)</i> represents the link between <i>i</i> an
   <i>j</i>), we are looking for the highest 100 elements of the matrix <i>M*M</i>.
 
-  2. Notice that a lot of Category pages (denoted "Category:.*") have a high
-  link count and will rank very highly according to this metric.  Wikipedia
-  also has `Talk:` pages, `Help:` pages, and static resource `Files:`.  All
-  such "non-content" pages (and there might be more than just this) and links
-  to them should be first filtered out in this analysis.
+  2. A lot of Category pages (denoted "Category:.*") have a high
+  link count and rank very highly according to this metric.  Wikipedia
+  also has `Talk:` pages, `Help:` pages, static resource `Files:`, etc. I had to filter out all 
+  such non-content pages for this analysis.
 
   3. Some pages have more links than others.  If I'd just counted the number of
   double links between pages, I'd have ended up gathering links that appear on articles with
