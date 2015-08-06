@@ -45,7 +45,8 @@ class MRLINKSTATS(MRJob):
             for tag, text in tag_and_text:
                 try:
                     if (tag == 'text' and text):
-                        wikilinks = mwparserfromhell.parse(text).filter_wikilinks()
+                        hell_filter = mwparserfromhell.parse(text)
+                        wikilinks = hell_filter.filter_wikilinks()
                         x = len(set(wikilinks))
                         randno = random.random()
                         self.pagecount += 1
