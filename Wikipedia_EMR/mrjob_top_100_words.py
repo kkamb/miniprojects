@@ -31,7 +31,8 @@ class MRTOP100(MRJob):
         tag_and_text = [(x.tag, x.text) for x in root.getiterator()]
         for tag, text in tag_and_text:
             if (tag == 'text' and text):
-                for parsedtext in mwparserfromhell.parse(text).filter_text():    
+                hell_filter = mwparserfromhell.parse(text)
+                for parsedtext in hell_filter.filter_text():    
                     for word in WORD_RE.findall(parsedtext.value):
                         yield (word.lower(), 1)
 
