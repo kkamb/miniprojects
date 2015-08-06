@@ -84,7 +84,7 @@ class MRLINKSTATS(MRJob):
             counts.sort()
             yield ('5th percentile', float(counts[int(round(len(counts)*0.05)-1)]))
             yield ('25th percentile', float(counts[int(round(len(counts)*0.25)-1)]))
-            yield ('50th percentile', float(counts[int(round(len(counts)*0.5)-1)]))
+            yield ('median', float(counts[int(round(len(counts)*0.5)-1)]))
             yield ('75th percentile', float(counts[int(round(len(counts)*0.75)-1)]))
             yield ('95th percentile', float(counts[int(round(len(counts)*0.95)-1)]))
                     
