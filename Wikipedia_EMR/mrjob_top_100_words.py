@@ -27,7 +27,7 @@ class MRTOP100(MRJob):
             yield (None,page)
     
     def mapper_get_xml_words(self, _, page):
-        root = ET.fromstring(page.encode)
+        root = ET.fromstring(page)
         tag_and_text = [(x.tag, x.text) for x in root.getiterator()]
         for tag, text in tag_and_text:
             if (tag == 'text' and text):
