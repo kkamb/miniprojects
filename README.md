@@ -23,6 +23,6 @@ I attempted to predict a new venue's popularity from information available when 
 I then explored how much information was contained in the review texts, whether they could more accurately predict ratings. Since I was working with over one million reviews and a design matrix of over a million feature-words, scalability was an overriding factor during model selection, especially since the model had to fit within Heroku's memory constraints. However, the predictive power of even a basic out-of-the-box ridge regression was magnitudes greater than that of the models in the previous section (yielding a score of over .6).
 
 
-(4) Analyzing Wikipedia via MapReduce
+(4) <a href="https://github.com/kkamb/miniprojects/tree/master/Wikipedia_EMR">Analyzing Wikipedia via MapReduce</a>
 
-I scraped the entire English Wikipedia to determine its most frequently used words. I then collected link statistics (mean, standard deviations, percentiles, etc) for the unique links on each page, and found what the top linked concepts were via doublelinks.
+I scraped the entire English Wikipedia to determine its <a href="https://github.com/kkamb/miniprojects/blob/master/Wikipedia_EMR/mrjob_top_100_words.py">most frequently used words</a>. I then collected <a href="https://github.com/kkamb/miniprojects/blob/master/Wikipedia_EMR/mrjob_linkstats.py">link statistics</a> (mean, standard deviations, percentiles) for the unique links on each page, and found what the top linked concepts were via doublelinks.
