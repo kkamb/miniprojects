@@ -37,7 +37,7 @@ Finally, I looked at double links (pages A and C that are connected through many
   One strategy is to weight each link as <i>1/n</i> where <i>n</i> is the
   number links on the page.  This way, an article has to spread its
   "influence" over all <i>n</i> of its links.  However, this can throw off the
-  results for small <i>n</i>. So I created a somewhat arbitrary threshold at 10, and weighted each link as <i>1/(n+10)</i>. This means that my "count" for 
-  a pair (A,C) is the product of the two link weights between them, 
-  summed up over all their shared connections.
+  results for small <i>n</i>. To control for pages with few links, I added a somewhat arbitrary constant <i>10</i>, and weighted each link as <i>1/(n+10)</i>. My final "count" for 
+  a pair (A,C) was the product of their two link weights, 
+  summed over all their shared connections.
 
