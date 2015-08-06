@@ -25,4 +25,4 @@ I then explored how much information was contained in the review texts, whether 
 
 (4) <a href="https://github.com/kkamb/miniprojects/tree/master/Wikipedia_EMR">Analyzing Wikipedia via MapReduce</a>
 
-I scraped the entire English Wikipedia to determine its <a href="https://github.com/kkamb/miniprojects/blob/master/Wikipedia_EMR/mrjob_top_100_words.py">most frequently used words</a>. I then collected <a href="https://github.com/kkamb/miniprojects/blob/master/Wikipedia_EMR/mrjob_linkstats.py">link statistics</a> (mean, standard deviations, percentiles) for the unique links on each page, and found what the top linked concepts were via doublelinks.
+I scraped the entire English Wikipedia to determine its <a href="https://github.com/kkamb/miniprojects/blob/master/Wikipedia_EMR/mrjob_top_100_words.py">most frequently used words</a>. I then collected <a href="https://github.com/kkamb/miniprojects/blob/master/Wikipedia_EMR/mrjob_linkstats.py">link statistics</a> (mean, standard deviations, percentiles) for the unique links on each page, and found the top linked concepts via examining doublelinks.
