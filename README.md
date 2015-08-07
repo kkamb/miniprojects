@@ -13,8 +13,8 @@ In this project, I investigate these connections between the NYC elite. I determ
 
 The city of New York assigns a grade to restaurants after each inspection. I used PostGreSQL to parse and analyze four years worth of  NYC Restaurant Inspections data. I extracted different slices -- determining the grade distribution by zipcode, borough, and cuisine. I also found which cuisines tended to have a disproportionate number of which violations.
 
-<center><img src="https://github.com/kkamb/miniprojects/blob/master/carto_map.png"></center>
-A map view of score distributions, where higher intensity reds are equivalent to higher scores.
+<center><img src="https://github.com/kkamb/miniprojects/blob/master/carto_map.png"></center><br>
+A map view of scores by zipcode, where higher intensity reds are equivalent to higher scores.
 
 (3a) <a href="https://github.com/kkamb/miniprojects/blob/master/Yelp_ML.ipynb">Using Semi-Structured Data to Predict Yelp Ratings</a>
 
