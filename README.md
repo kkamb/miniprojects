@@ -9,7 +9,7 @@ A few projects I finished in Summer 2015.
 In this project, I investigate these connections between the NYC elite. I determine who the most socially popular and influential people are, as well as pairs with the strongest connections. (The latter analysis picks up the obvious  -- marriages and family ties -- as well as connections not readily apparent, such as affairs and infidelities.)
 
 
-(2) Using PostGreSQL To Investigate NYC Restaurants
+(2) <a href="https://github.com/kkamb/miniprojects/blob/master/NYC_Restaurant_Inspections_SQL.ipynb">Using PostGreSQL To Investigate NYC Restaurants</a>
 
 The city of New York assigns a grade to restaurants after each inspection. I used PostGreSQL to parse and analyze four years worth of  NYC Restaurant Inspections data. I extracted different slices -- determining the grade distribution by zipcode, borough, and cuisine. I also found which cuisines tended to have a disproportionate number of which violations.
 
